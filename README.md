@@ -15,3 +15,10 @@ The JavaScript Vanilla Shopping Cart Example is a web application that showcases
 - Calculate and display the total cost of items in the cart
 - Purchase items (dummy functionality with an alert message)
 
+# Installation
+
+To run the JSON server locally, navigate to the `database` folder and use the following command:
+
+```bash
+npx json-server@0.17.4 db.json -p 3030
+
