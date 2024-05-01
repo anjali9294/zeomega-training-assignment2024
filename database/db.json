@@ -1,0 +1,124 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Shirt",
+      "unitCost": 100,
+      "image": "https://source.unsplash.com/random/?Shirt",
+      "quantity": 1,
+      "createdAt": "2024-04-30T10:57:44.668Z"
+    },
+    {
+      "id": 2,
+      "name": "Notebook",
+      "unitCost": 200,
+      "image": "https://source.unsplash.com/random/?Notebook",
+      "quantity": 1,
+      "createdAt": "2024-04-30T11:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Pencil",
+      "unitCost": 50,
+      "image": "https://source.unsplash.com/random/?Pencil",
+      "quantity": 1,
+      "createdAt": "2024-04-30T11:02:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Eraser",
+      "unitCost": 30,
+      "image": "https://source.unsplash.com/random/?Eraser",
+      "quantity": 1,
+      "createdAt": "2024-04-30T11:04:00.000Z"
+    },
+    {
+      "id": 5,
+      "name": "Ruler",
+      "unitCost": 150,
+      "image": "https://source.unsplash.com/random/?Ruler",
+      "quantity": 1,
+      "createdAt": "2024-04-30T11:06:00.000Z"
+    },
+    {
+      "id": 6,
+      "name": "Markers",
+      "unitCost": 250,
+      "image": "https://source.unsplash.com/random/?Markers",
+      "quantity": 1,
+      "createdAt": "2024-04-30T11:08:00.000Z"
+    },
+    {
+      "id": 7,
+      "name": "Sticky Notes",
+      "unitCost": 80,
+      "image": "https://source.unsplash.com/random/?Sticky Notes",
+      "quantity": 1,
+      "createdAt": "2024-04-30T11:10:00.000Z"
+    },
+    {
+      "id": 8,
+      "name": "Scissors",
+      "unitCost": 120,
+      "image": "https://source.unsplash.com/random/?Scissors",
+      "quantity": 1,
+      "createdAt": "2024-04-30T11:12:00.000Z"
+    },
+    {
+      "id": 9,
+      "name": "Highlighter",
+      "unitCost": 70,
+      "image": "https://source.unsplash.com/random/?Highlighter",
+      "quantity": 1,
+      "createdAt": "2024-04-30T11:14:00.000Z"
+    },
+    {
+      "id": 10,
+      "name": "Calculator",
+      "unitCost": 500,
+      "image": "https://source.unsplash.com/random/?Calculator",
+      "quantity": 1,
+      "createdAt": "2024-04-30T11:16:00.000Z"
+    },
+    {
+      "id": 11,
+      "name": "t-shirt",
+      "image": "https://source.unsplash.com/random/?t-shirt",
+      "unitCost": 1,
+      "quantity": 1,
+      "createdAt": "2024-05-01T07:39:41.157Z"
+    },
+    {
+      "id": 12,
+      "name": "laptop",
+      "image": "https://source.unsplash.com/random/?laptop",
+      "unitCost": "30000",
+      "quantity": 1,
+      "createdAt": "2024-05-01T07:43:11.774Z"
+    },
+    {
+      "id": 13,
+      "name": "jeans",
+      "image": "https://source.unsplash.com/random/?jeans",
+      "unitCost": 1000,
+      "quantity": 1,
+      "createdAt": "2024-05-01T10:22:11.668Z"
+    },
+    {
+      "id": 14,
+      "name": "jeans",
+      "image": "https://source.unsplash.com/random/?jeans",
+      "unitCost": 1000,
+      "quantity": 1,
+      "createdAt": "2024-05-01T10:43:58.146Z"
+    },
+    {
+      "id": 15,
+      "name": "shirt",
+      "image": "https://source.unsplash.com/random/?shirt",
+      "unitCost": 100,
+      "quantity": 1,
+      "createdAt": "2024-05-01T11:06:57.642Z"
+    }
+  ]
+}

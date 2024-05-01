@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>JavaScript Vanilla Shopping Cart Example</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- AngularJS Library -->
+    <script src="angular.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="./js/product.js"></script>
+</head>
+<body ng-app="app">
+
+<main ng-controller="productCtrl">
+    <!-- Cart Modal Overlay -->
+    <div class="cart-modal-overlay" ng-show="showCartModal">
+        <div class="cart-modal">
+            <i id="close-btn" class="fas fa-times" ng-click="closeCartModal()"></i>
+            <h1 class="cart-is-empty">Cart is empty</h1>
+            <!-- Cart Items List -->
+            <div class="product-rows">
+                <div class="product-row" ng-repeat="product in carts">
+                    <img class="cart-image" src="{{product.image}}" alt="">
+                    <span class="cart-price">{{product.name}}</span>
+                    <span class="cart-price">${{product.unitCost}}</span>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn btn btn-dark m-1" ng-click="decrementQuantity(product)">-</button>
+                        <span class="quantity">{{product.quantity}}</span>
+                        <button class="quantity-btn btn btn-dark m-1" ng-click="incrementQuantity(product)">+</button>
+                    </div>
+                    <button class="remove-btn" ng-click="removeItem(product)">Remove</button>
+                </div>
+            </div>
+            <!-- Cart Total Section -->
+            <div class="total">
+                <h1 class="cart-total">TOTAL</h1>
+                <span class="total-price">${{calculateTotalPrice()}}</span>
+                <button class="purchase-btn" ng-click="purchase()" ng-disabled="carts.length === 0">PURCHASE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Button -->
+    <div class="cart-btn" ng-click="cartClick()">
+        <i id="cart" class="fas fa-shopping-cart"></i>
+        <span class="cart-quantity">{{carts.length}}</span>
+    </div>
+
+    <!-- Add Product Form -->
+    <div class="mt-5 ms-3">
+        <form class="row g-3" name="productForm" ng-submit="onAddNewProduct(newProduct, cost)" novalidate>
+            <div class="col-auto">
+                <input type="text" class="form-control" placeholder="Add New Product" ng-model="newProduct" required>
+                <div class="invalid-feedback" ng-show="productForm.newProduct.$error.required && productForm.$submitted">
+                    Product name is required.
+                </div>
+            </div>
+            <div class="col-auto">
+                <input type="number" class="form-control" placeholder="Unit Cost" ng-model="cost" required>
+                <div class="invalid-feedback" ng-show="productForm.cost.$error.required && productForm.$submitted">
+                    Unit cost is required.
+                </div>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3" ng-disabled="productForm.$invalid">Add Product</button>
+            </div>
+        </form>
+
+        <!-- Product Search -->
+        <label for="exampleDataList" class="form-label">Search Product</label>
+        <input class="form-control" placeholder="Type to search..." ng-model="productServic.name">
+    </div>
+
+    <!-- Products List -->
+    <div class="items-container">
+        <div class="card" ng-repeat="product in products | filter : productServic">
+            <img class="product-image" src="{{product.image}}" alt="">
+            <button class="add-to-cart" ng-click="addToCart(product)">Add to cart</button>
+            <span class="product-price">{{product.name}}</span><br>
+            <span class="product-price">${{product.unitCost}}</span>
+        </div>
+    </div>
+</main>
+
+<!-- Bootstrap JS (Optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
