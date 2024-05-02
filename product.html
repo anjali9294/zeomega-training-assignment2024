@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div class="col-auto">
-                <input type="number" class="form-control" placeholder="Unit Cost" ng-model="cost" required>
+                <input type="number" class="form-control" placeholder="Unit Cost" ng-model="cost" required min="1">
                 <div class="invalid-feedback" ng-show="productForm.cost.$error.required && productForm.$submitted">
                     Unit cost is required.
                 </div>

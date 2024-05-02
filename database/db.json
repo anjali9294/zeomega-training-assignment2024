@@ -119,6 +119,14 @@
       "unitCost": 100,
       "quantity": 1,
       "createdAt": "2024-05-01T11:06:57.642Z"
+    },
+    {
+      "id": 16,
+      "name": "toothpast",
+      "image": "https://source.unsplash.com/random/?toothpast",
+      "unitCost": 40,
+      "quantity": 1,
+      "createdAt": "2024-05-02T05:59:28.122Z"
     }
   ]
 }
