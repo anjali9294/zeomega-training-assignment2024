@@ -86,10 +86,17 @@ app.controller('productCtrl', function($scope, productApi, productServic) {
 
     // Add a product to the cart
     $scope.addToCart = function(product) {
-        var idxToRemove = $scope.products.indexOf(product);
-        if (idxToRemove !== -1) {
-            $scope.carts.push($scope.products.splice(idxToRemove, 1)[0]);
+        var existingItem = $scope.carts.find(function(item) {
+            return item.id === product.id;
+        });
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            var idxToRemove = $scope.products.indexOf(product);
+            if (idxToRemove !== -1) {
+                $scope.carts.push(product)
         }
+    }
     };
 
     // Toggle visibility of the cart modal
